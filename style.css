@@ -1,0 +1,131 @@
+@charset "utf-8";
+body {
+font-family: Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+margin: 0; padding: 0; font-size: 12px; color: #333;
+background-image: url(img/back.gif); background-repeat: no-repeat;
+background-position: center top; text-align: center;
+}
+
+#header { margin: 0;
+	width: 800px; height: 75px;
+	background: #ffffff;
+	border-bottom: solid 3px #69821b;
+	background-image: url(img/header.jpg);
+	}
+#header h1 {  /*idとしての headerの中にある h1だけに適用するセレクタの書き方*/
+	margin: 0;	padding: 2px 0 0 10px;
+	font-weight: normal;
+	font-size: 11px;/*110だった*/
+	text-align: left; color: #666666;
+	}
+#contents h2 { color: #69821b;
+	margin: 0 0 4px 0;
+	padding: 9px 0 7px 14px;/*1番めを9pxに*/
+	line-height: 110%; font-size: 12px;
+	background-image: url(img/titlebar.gif);
+	background-repeat: no-repeat;
+	clear: both;
+	}
+
+ /*セレクタにくっつけて書いている:hoverのことを擬似クラスといいます*/
+a:link {  /*既存リンク文字の色*/
+	color: #69821b;font-size: 12px;
+	}
+a:hover {    /*マウスが乗った時のリンク文字の色*/
+	color: #99ab4e;font-size: 12px;
+	}
+a:visited {  /*一度訪れたリンク文字の色*/
+	color: #69821b;font-size: 12px;
+	}
+
+p {
+	margin: 18px 0 18px; /*マージンは余白
+	      数字が3つなら 上  (左右) 下 の順
+	      2つなら  (上下)(左右)
+	      4つなら  上右下左    時計回りです
+	   */
+	line-height: 180%;
+	letter-spacing: 1px;
+	}
+
+#container {
+	margin: 0 auto ;
+	/*自動とはブラウザ任せのサイズ、ここで重要なのは左右が自動の意味
+	 このBOXは中央に配置される。
+	 * */
+
+	padding: 0;
+	width: 800px;/*単位がなかった*/
+	background-color:#ffffff;
+	text-align: left; /*文字の左寄せを追加します*/
+	}
+
+#contents,table {/*#がなかった*/
+	float:right;/*右に浮かんだ liteじゃない*/
+	margin: 0;
+	padding: 5px 8px 5px 0;
+	font-size: 12px;
+	line-height: 180%;
+	width: 590px;
+	}
+
+#footer { /*oが一つ足りなかった*/
+	width: 800px; height: 45px;
+	text-align: center; font-size: 12px;
+	color: #333333;background-color: #cccccc;
+	padding-top: 40px; padding-bottom: 12px;
+	clear:both;/*回り込み(float)の影響を受けない*/
+	}
+.tLeft { /*このクラスをcontainerに追加*/
+text-align: left;
+	}
+
+td.tori{  /*テーブル内の木がこれでつながる*/
+	line-height: 0;
+ 	}
+.photo{
+	float: left;
+	margin: 10px 12px 20px 0 ;
+	}/*写真が左に浮きあがる*/
+
+#table-right {
+	float: right;
+	}
+
+#menu {
+	margin: 0 0 15px 0; padding: 0;
+	width: 170px;
+	text-align: left ;
+	background-image: url(img/menu_back.gif);
+	}
+
+#menu h2 { /*ｉｄ menuの中のh2 の意味 外のh2には影響無*/
+	margin: 0 0 2px 0;
+	padding: 7px 0 5px 12px;
+	line-height: 110%;/*単位がなかった*/
+	font-size: 12px; color: #fffffc;
+	background-image: url(img/sidebar.gif);
+	}
+
+.menulist { /*2回使うのでクラスに直した*/
+	margin: 0 0 15px 0;
+	padding: 5px 2px 0px 5px;
+	width: 160px;
+	text-align: left;
+	background-image: url(img/menu_back.gif);
+	}
+
+.menulist a{ color: #69821b;
+	width: 138px; display: block;
+	border-bottom: solid 1px #9f9f9f;
+	padding: 5px 4px 4px 20px;
+	font-size: 12px; line-height: 160%;
+	background-image:url(img/side_menu_bg.gif);
+	background-repeat: no-repeat;
+	}
+.menulist a:hover{
+	color: #99ab4e;
+	background-image:
+	url(img/side_menu_bg_hover.gif);
+	background-repeat: no-repeat;
+	}
